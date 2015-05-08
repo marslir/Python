@@ -8,6 +8,7 @@ c=wmi.WMI(computer="172.20.10.2",user="LIR",password="940914").StdRegProv
 #HKEY_LOCAL_MACHINE (2147483650 (0x80000002))
 #HKEY_USERS (2147483651 (0x80000003))
 #HKEY_CURRENT_CONFIG (2147483653 (0x80000005))
+#查询最后一次成功安装更新的日期和时间
 results,value = c.GetStringValue(hDefKey=2147483649,sSubKeyName=r"Software\\360desktop",sValueName="appinstall1")#r"SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\WindowsUpdate\\Auto Update\\Results\\Install",sValueName="LastSuccessTime")
 #输出结果
 print value
