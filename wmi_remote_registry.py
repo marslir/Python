@@ -1,3 +1,4 @@
+#WinServer2008，Win7测试可用
 import wmi
 #建立连接
 c=wmi.WMI(computer="172.20.10.2",user="LIR",password="940914").StdRegProv
@@ -7,6 +8,6 @@ c=wmi.WMI(computer="172.20.10.2",user="LIR",password="940914").StdRegProv
 #HKEY_LOCAL_MACHINE (2147483650 (0x80000002))
 #HKEY_USERS (2147483651 (0x80000003))
 #HKEY_CURRENT_CONFIG (2147483653 (0x80000005))
-results,names = c.GetStringValue(hDefKey=2147483649,sSubKeyName=r"Software\\360desktop",sValueName="appinstall1")#r"SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\WindowsUpdate\\Auto Update\\Results\\Install",sValueName="LastSuccessTime")
+results,value = c.GetStringValue(hDefKey=2147483649,sSubKeyName=r"Software\\360desktop",sValueName="appinstall1")#r"SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\WindowsUpdate\\Auto Update\\Results\\Install",sValueName="LastSuccessTime")
 #输出结果
-print names
+print value
