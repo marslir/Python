@@ -26,4 +26,4 @@ for i in range(0,nrows):
   f.write("Last Detect Time :\n" + install + "\n")
   timenow=time.strftime('%a,%d,%b,%Y,%H:%M:%S',time.localtime())
   f.wirte("Checked at local time:\n",timenow)
-  
+f.close()
