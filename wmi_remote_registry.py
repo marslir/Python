@@ -2,7 +2,7 @@ import xlrd
 import os
 import wmi
 import time
-fname = "check.xlsx"
+fname = "checklist.xlsx"
 bk = xlrd.open_workbook(fname)
 shxrange = range(bk.nsheets)
 try:
